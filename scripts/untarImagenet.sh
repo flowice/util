@@ -37,3 +37,4 @@ done
 echo untar $VAL_TAR to $VAL_DIR
 tar xvf $VAL_TAR -C $VAL_DIR
 
+rm -r $TMP_DIR
