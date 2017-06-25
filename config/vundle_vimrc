@@ -28,7 +28,7 @@ Plugin 'VundleVim/Vundle.vim'
 Bundle 'majutsushi/tagbar'
 "nmap <Leader>tb :TagbarToggle<CR>    "快捷键设置
 let g:tagbar_ctags_bin='ctags'   "ctags程序到路径
-let g:tagbar_width=20                   "窗口宽度到设置
+let g:tagbar_width=25                   "窗口宽度到设置
 map <F3> :Tagbar<CR>
 "autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 
@@ -43,23 +43,28 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplMoreThanOne = 0
-map <F11> :MBEbp<CR>
-map <F12> :MBEbn<CR>
+map <F7> :MBEbp<CR>
+map <F8> :MBEbn<CR>
 
 Bundle 'bling/vim-airline'
 set laststatus=2
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#symbol = '!'
 
 Bundle 'a.vim'
-Bundle 'rdnetto/YCM-Generator'
-"Run ./config_gen.py PROJECT_DIRECTORY, where PROJECT_DIRECTORY is the root directory of your project's build system (i.e. the one containing the root Makefile, etc.)
-Bundle 'Valloric/YouCompleteMe'
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_filetype_blacklist = {
-	\ 'tagbar' : 1,
-	\ 'nerdtree' : 1,
-	\}
+"Bundle 'rdnetto/YCM-Generator'
+""Run ./config_gen.py PROJECT_DIRECTORY, where PROJECT_DIRECTORY is the root directory of your project's build system (i.e. the one containing the root Makefile, etc.)
+"Bundle 'Valloric/YouCompleteMe'
+"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+"let g:ycm_filetype_blacklist = {
+"	\ 'tagbar' : 1,
+"	\ 'nerdtree' : 1,
+"	\}
+
+Bundle 'hynek/vim-python-pep8-indent'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
