@@ -5,16 +5,21 @@ set autochdir
 
 syntax enable
 syntax on
-colorscheme desert
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
 set guifont=Monospace\ 12
 set fileencodings=ucs-bom,utf-8,cp936
 set fileencoding=utf-8
 set encoding=utf-8
 set nu
 "set lines=35 columns=80
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
 set cindent
